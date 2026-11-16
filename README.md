@@ -1,3 +1,4 @@
+
 @'
 # 🔢 DigitVision AI – Handwritten Digit Recognition
 
@@ -14,21 +15,23 @@
   <img src="https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
 </p>
 
+---
+
 ## 🌐 Live Demo
 
-**Try DigitVision AI here:**
+**Try the application here:**
 
 👉 https://digitvision-ai-project.streamlit.app/
 
-Upload an image of a handwritten digit and let the CNN model predict the digit from 0 to 9.
+Upload an image of a handwritten digit and let the CNN model predict the digit from 0 to 9 with a confidence score.
 
 ## 📌 About the Project
 
 DigitVision AI is a deep learning-based handwritten digit recognition application built using a Convolutional Neural Network (CNN).
 
-The model is trained on the MNIST dataset, containing 60,000 training images and 10,000 testing images of handwritten digits.
+The model is trained on the MNIST dataset, which contains 60,000 training images and 10,000 testing images of handwritten digits.
 
-Users can upload their own handwritten digit images and get instant predictions with confidence scores and probability distributions.
+Users can upload their own handwritten digit images and receive predictions along with confidence scores and probability distributions.
 
 ## ✨ Features
 
@@ -39,6 +42,7 @@ Users can upload their own handwritten digit images and get instant predictions 
 - 🎯 MNIST sample image demonstration
 - 📈 Model performance evaluation
 - 📉 Accuracy and loss visualization
+- 📊 Confusion matrix and classification metrics
 - 🌐 Interactive Streamlit web interface
 
 ## 🛠️ Tech Stack
@@ -81,6 +85,18 @@ The model uses the following architecture:
 - Optimizer: Adam
 - Loss function: Sparse Categorical Crossentropy
 
+## 📊 Model Training
+
+The CNN model is trained using the MNIST handwritten digit dataset.
+
+During training, the application tracks:
+- Training accuracy
+- Validation accuracy
+- Training loss
+- Validation loss
+
+Model performance can be explored through the application's Model Performance section.
+
 ## 🚀 Run Locally
 
 ### 1. Clone the repository
@@ -88,3 +104,78 @@ The model uses the following architecture:
 ```bash
 git clone https://github.com/Vedantvijayvargiya-06/DigitVisionAI.git
 cd DigitVisionAI
+```
+
+### 2. Create a virtual environment
+
+```bash
+py -3.12 -m venv .venv
+```
+
+### 3. Activate the environment (Windows)
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### 4. Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 5. Run the application
+
+```bash
+python -m streamlit run app.py
+```
+
+The application will open in your browser at:
+
+`http://localhost:8501`
+
+## 📂 Project Structure
+
+```text
+DigitVisionAI/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── sample_digit_7.png
+├── VedantVijay_CNN_Streamlit_Report.pdf
+└── .gitignore
+```
+
+## 🖼️ Sample Input
+
+The repository includes a sample handwritten digit image for testing.
+
+![Sample handwritten digit 7](sample_digit_7.png)
+
+**Expected prediction:** 7
+
+## 📄 Project Report
+
+Detailed project documentation and analysis:
+
+[View CNN Streamlit Project Report](VedantVijay_CNN_Streamlit_Report.pdf)
+
+## 👨‍💻 Author
+
+**Vedant Vijay**
+
+- GitHub: [@Vedantvijayvargiya-06](https://github.com/Vedantvijayvargiya-06)
+- Project Repository: [DigitVisionAI](https://github.com/Vedantvijayvargiya-06/DigitVisionAI)
+- Live Application: [DigitVision AI](https://digitvision-ai-project.streamlit.app/)
+
+## ⭐ Support
+
+If you find this project interesting, consider giving it a ⭐ on GitHub!
+
+---
+
+<p align="center">
+  Built with ❤️ using Python, TensorFlow and Streamlit.
+</p>
+'@ | Set-Content -Encoding utf8 README.md
