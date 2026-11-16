@@ -1,74 +1,90 @@
-# DigitVision AI – Handwritten Digit Recognition
+@'
+# 🔢 DigitVision AI – Handwritten Digit Recognition
 
-**Minor Project 7 | Student: Vedant Vijay**
+<p align="center">
+  <strong>Recognize handwritten digits instantly using Deep Learning.</strong>
+</p>
 
-DigitVision AI is a handwritten digit recognition application built with a Convolutional Neural Network (CNN) and Streamlit. It uses the MNIST dataset to classify digits from 0 to 9.
+<p align="center">
+  <a href="https://digitvision-ai-project.streamlit.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-Open%20App-brightgreen?style=for-the-badge&logo=streamlit" alt="Live Demo">
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/TensorFlow-2.18-orange?style=for-the-badge&logo=tensorflow" alt="TensorFlow">
+  <img src="https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
+</p>
 
-## Features
+## 🌐 Live Demo
 
-- Upload a handwritten digit image (PNG, JPG, or JPEG) and get a prediction.
-- View the predicted digit, confidence score, and class probabilities.
-- Explore demo samples from MNIST.
-- Review model performance, including evaluation metrics and a confusion matrix.
-- Includes the project report PDF.
+**Try DigitVision AI here:**
 
-## Technology stack
+👉 https://digitvision-ai-project.streamlit.app/
 
-Python, TensorFlow/Keras, CNN, Streamlit, NumPy, Matplotlib, Seaborn, Scikit-learn, Pillow.
+Upload an image of a handwritten digit and let the CNN model predict the digit from 0 to 9.
 
-## Run locally (Windows)
+## 📌 About the Project
 
-Python 3.11 is recommended.
+DigitVision AI is a deep learning-based handwritten digit recognition application built using a Convolutional Neural Network (CNN).
 
-1. Extract this project folder.
-2. Open Command Prompt or PowerShell inside the `DigitVisionAI` folder.
-3. Create and activate a virtual environment:
+The model is trained on the MNIST dataset, containing 60,000 training images and 10,000 testing images of handwritten digits.
 
-   ```powershell
-   py -3.11 -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
+Users can upload their own handwritten digit images and get instant predictions with confidence scores and probability distributions.
 
-   If PowerShell blocks activation, use Command Prompt and run `.venv\\Scripts\\activate.bat`.
+## ✨ Features
 
-4. Install dependencies:
+- 🔢 Handwritten digit recognition (0–9)
+- 🧠 CNN model built using TensorFlow and Keras
+- 📊 Prediction confidence and probability visualization
+- 🖼️ Upload handwritten digit images (PNG, JPG, JPEG)
+- 🎯 MNIST sample image demonstration
+- 📈 Model performance evaluation
+- 📉 Accuracy and loss visualization
+- 🌐 Interactive Streamlit web interface
 
-   ```powershell
-   python -m pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
+## 🛠️ Tech Stack
 
-5. Start the app:
+| Technology | Purpose |
+|---|---|
+| Python | Core programming |
+| TensorFlow | Deep learning framework |
+| Keras | CNN model development |
+| Streamlit | Web application |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Scikit-learn | Model evaluation |
+| Pillow (PIL) | Image processing |
 
-   ```powershell
-   streamlit run app.py
-   ```
+## 🧠 CNN Architecture
 
-6. Streamlit will show a local URL, usually `http://localhost:8501`.
+The model uses the following architecture:
 
-The first launch downloads the MNIST dataset and trains the CNN. This can take a few minutes and requires an internet connection. The trained model and metrics are cached in the system temporary directory for subsequent launches.
+1. Input layer – 28 × 28 grayscale images
+2. Convolutional layer – 32 filters
+3. Max Pooling layer
+4. Convolutional layer – 64 filters
+5. Max Pooling layer
+6. Dropout layer
+7. Flatten layer
+8. Dense layer – 128 neurons
+9. Dropout layer
+10. Output layer – 10 neurons with Softmax activation
 
-## Run the CNN workflow in terminal (optional)
+### Training Configuration
 
-```powershell
-python app.py --train
-```
+- Dataset: MNIST
+- Training images: 60,000
+- Testing images: 10,000
+- Image dimensions: 28 × 28
+- Epochs: 8
+- Batch size: 128
+- Optimizer: Adam
+- Loss function: Sparse Categorical Crossentropy
 
-Optional arguments:
+## 🚀 Run Locally
 
-```powershell
-python app.py --train --epochs 8 --out part_a_outputs
-```
+### 1. Clone the repository
 
-## Deploy on Streamlit Community Cloud
-
-1. Push the contents of this folder to a GitHub repository.
-2. Open Streamlit Community Cloud and connect your GitHub account.
-3. Create an app using the repository and select `app.py` as the main file.
-4. Deploy. The first startup may take longer because the app downloads MNIST and trains the model.
-
-## Project files
-
-- `app.py` – CNN workflow and Streamlit application.
-- `requirements.txt` – Python dependencies.
-- `VedantVijay_CNN_Streamlit_Report.pdf` – project report.
+```bash
+git clone https://github.com/Vedantvijayvargiya-06/DigitVisionAI.git
+cd DigitVisionAI
