@@ -1,5 +1,3 @@
-
-@'
 # 🔢 DigitVision AI – Handwritten Digit Recognition
 
 <p align="center">
@@ -178,4 +176,3 @@ If you find this project interesting, consider giving it a ⭐ on GitHub!
 <p align="center">
   Built with ❤️ using Python, TensorFlow and Streamlit.
 </p>
-'@ | Set-Content -Encoding utf8 README.md
